@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Flat UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+    <link rel="shortcut icon" href="http://www.travpace-demo.com.php53-18.ord1-1.websitetestlink.com/wp-content/themes/travpace/img/favicon.png">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <h1 class="demo-headline">TRAVPACE DEVELOPER GUIDE</h1>
+    <div class="container">
+      <div class="demo-row">
+        <div class="demo-title">
+          <h3>1. Overview</h3>
+        </div>
+
+        <div class="demo-content demo-content-article">
+          <p>
+            <a href="http://travpace.com/demo" target="_blank">TRAVPACE</a>
+            is a beautiful wordpress theme for selling online accomodations based on <a href="http://foundation.zurb.com/" target="_blank">Foundation</a>.
+            <br/>We redesigned many of it's components to look flat & scalable in every pixel so that it can accomodates you on your inherited projects.
+          </p>
+          <p>
+            Accordingly, you shall create a child theme that uses our Travpace theme as its parent theme, and do your customisations based on the provided <strong>PSD</strong> <sup><a href="#">1</a></sup>
+          </p>
+        </div>
+      </div><!-- /.demo-row -->
+
+
+      <div class="demo-row">
+        <div class="demo-title">
+          <h3 id="dependencies">2. Dependencies</h3>
+        </div>
+
+        <div class="demo-content demo-content-article">
+            <p>We did not modify any line of Foundation (Except for RTL & its main color) which is already happening automatically from <strong>Theme Options</strong> so you will be safe using Travpace in your ongoing project
+            as long as you understand the CSS structure:</p>
+
+              <h5>1. Foundation Framework Stylesheet</h5>
+              <div class="alert">
+                <h6>Two Mutually-Exclusive Files</h6>
+              </div>
+              The first file is <code>css/foundation.css</code> which will be rendred automatically if you're on a LTR project, the second file accordingly is <code>css/foundation-rtl.css</code> which is for RTL projects.<br/>
+              <em class="text-info">Note</em> You aren't allowed to modify either <code>css/foundation-rtl.css</code> or <code>css/foundation.css</code>
+
+              <hr/>
+
+              <h5>2. <a href="#" style="color: #333333;border-bottom: 1px solid #000;padding-bottom: 2px;" title="MitchDesigns.com">MD</a> Foundation-Redesigned-Components Stylesheet</h5>
+              <div class="alert">
+                <h6>Two Complementary-Non-Exclusive Files</h6>
+              </div>
+              We redesigned many of Foundation components to look flat & scalable in every pixel so that it can accomodates you on your inherited projects.
+              <br/>
+              We created <code>css/md-travel.css</code> which is <strong>mandatory</strong> for the theme to work wether it's LTR or RTL, The second file is <code>css/md-travel-rtl.css</code> which is for RTL-only projects.<br/>
+              <em class="text-info">Note</em> You aren't allowed to modify either <code>css/md-travel.css</code> or <code>css/md-travel-rtl.css</code>
+
+              <hr/>
+        </div>
+      </div><!-- /.demo-row -->
+
+
+
+
+      
+      <div class="demo-row">
+        <div class="demo-title">
+          <h3>3. Getting Started</h3>
+        </div>
+
+        <div class="demo-content demo-content-article">
+          <p>Since it is built on top of Foundation as a theme you can use it on your project with Foundation 5 according to its <a href="http://foundation.zurb.com/docs/" target="_blank">documentation</a>.</p>
+            <p>Using our parent theme is as easy as adding CSS rules to your <code>child-theme-folder/style.css</code> in your project folder and adding new assets, or overriding the current assets (Refrence to <a href="#dependencies"><strong>2. Dependencies</strong></a>)
+              <br/>
+              <h5>Client-Branded Custom Stylesheet</h5>
+              Editing your <code>child-theme-folder/style.css</code> of the child theme to have all your CSS magic rules, The easiest way to start the skin process is by applying the client brand color, complementary color(s), Typography, css rules to override the default components style.<br/>
+              Here is an example of how the file would look like <a href="http://www.al-lokanda.com.php53-18.ord1-1.websitetestlink.com/wp-content/themes/al-lokanda/style.css" target="_blank"><strong>demo</strong></a> and keep in mind the theme will crash if you took away the top comment.
+              <br/>
+              <pre class="prettyprint">
+/*
+Theme Name:   Your Website Name
+Theme URI: http://travpace.com/
+Author: MitchDesigns Team
+Author URI: http://mitchdesigns.com/
+Version: 2.0
+Template: travpace
+*/
+.your_rebranding{property:values;}
+</pre>
+        </div>
+      </div><!-- /.demo-row -->
+
+
+
+
+
+      <div class="demo-row">
+        <div class="demo-title">
+          <h3 id="theme_options">4. Theme Options</h3>
+        </div>
+
+        <div class="demo-content demo-content-article">
+          <p>
+            Once login to Wordpress Dashboard go to <code>Appearance > Theme Options</code> to see the following structure:</p>
+            <p>
+            <img src="images/theme-options.png" alt="" width="900"/>
+          </p>
+<pre>
+  Theme Options/
+  <span class="muted">├──</span> Basic Settings
+  <span class="muted">│   ├──</span> Logo
+  <span class="muted">│   ├──</span> Favicon
+  <span class="muted">│   └──</span> Color Scheme
+  <span class="muted">├──</span> Company Info
+  <span class="muted">│   ├──</span> Company Name
+  <span class="muted">│   ├──</span> Website Name
+  <span class="muted">│   ├──</span> Contact Phone Number
+  <span class="muted">│   ├──</span> Contact Email Address
+  <span class="muted">│   ├──</span> HQ Latitude
+  <span class="muted">│   └──</span> HQ Longitude
+  <span class="muted">├──</span> Main Pages
+  <span class="muted">├──</span> Homepage
+  <span class="muted">│   ├──</span> Show/Hide Top offers (Plus Title, Subtitle and sorting order)
+  <span class="muted">│   ├──</span> Show/Hide Staff Picks (Plus Title, Subtitle and sorting order)
+  <span class="muted">│   └──</span> Show/Hide Top Destinations (Plus Title, Subtitle and sorting order)
+  <span class="muted">├──</span> Main Parts
+  <span class="muted">│   ├──</span> Choosing Header File
+  <span class="muted">│   ├──</span> Choosing Footer File
+  <span class="muted">│   ├──</span> Choosing Pre-footer file
+  <span class="muted">│   └──</span> Choosing Homepage Splash File
+  <span class="muted">├──</span> Footer Options
+  <span class="muted">│   ├──</span> Copyrights Text
+  <span class="muted">│   ├──</span> Enable ETAA logo
+  <span class="muted">│   ├──</span> Enable IATA logo
+  <span class="muted">│   ├──</span> Enable Master Card logo
+  <span class="muted">│   ├──</span> Enable VISA logo
+  <span class="muted">│   ├──</span> Enable Trip Advisor logo
+  <span class="muted">│   └──</span> Enable Trip Norton logo
+  <span class="muted">├──</span> Social Links
+  <span class="muted">│   ├──</span> Facebook Page URL
+  <span class="muted">│   ├──</span> Twitter Profile URL
+  <span class="muted">│   └──</span> LinkedIn Profile URL
+  <span class="muted">├──</span> Posttagy Settings
+  <span class="muted">│   ├──</span> Form Action URL
+  <span class="muted">│   └──</span> Email Address Input field name
+  <span class="muted">└──</span> Menus
+  <span class="muted">    ├──</span> Main Navigation
+  <span class="muted">    ├──</span> Supporting Menu
+  <span class="muted">    ├──</span> Footer Menu 1
+  <span class="muted">    ├──</span> Footer Menu 2
+  <span class="muted">    ├──</span> Footer Menu 3
+  <span class="muted">    ├──</span> Footer Menu 4
+  <span class="muted">    └──</span> Coyrights Menu
+</pre>
+
+          <p>
+            Let's go from top to the bottom of this list.
+          </p>
+
+          <p>
+            <strong>Basic Settings</strong> &mdash; as you can guess this is a folder where all original
+            Bootstrap files are (untouched). Before using our theme please make sure you didn't modify
+            anything that can break compatibility: paddings, margins, etc. <br/>
+            <em class="text-info">Note</em>: you can modify <code>variables.less</code> safely.
+          </p>
+
+          <p>
+            <strong>Company Info</strong> &mdash; compiled Flat UI CSS. If you like everything and don't want
+            to change the look of our components it is better to use CSS version. This is an easiest
+            way to start using Flat UI.
+          </p>
+
+          <p>
+            <strong>Main Pages</strong> &mdash; yes, this is an icon font. When integrating make sure you
+            copied all font files correctly. You might want to change/add glyphs. If so, open
+            <a href="http://icomoon.io/app">IcoMoon</a> and import <code>icomoon-session.json</code>
+            there to make all glyhps editable.
+          </p>
+
+
+          <p>
+            <strong>Homepage</strong> &mdash; unfortunately we should use them in few cases. The rest
+            is in&nbsp;the&nbsp;glyphs.
+          </p>
+
+          <p>
+            <strong>Main Parts</strong> &mdash; we tried hard to make our components all look true Flat. To do
+            so we used JS plugins. Most of them are well known, some of them not. The most JS-ified part
+            is form components: checkboxes, radios, switches, selects since it is not currently possible
+            to style them identically in all browsers. Open <code>application.js</code> for integration
+            examples.
+          </p>
+
+          <p>
+            <strong>Footer Options</strong> &mdash; where all our stylesheets are (not preprocessed).
+          </p>
+
+          <p>
+            <strong>Social Links</strong> &mdash; where all our stylesheets are (not preprocessed).
+          </p>
+
+          <p>
+            <strong>Posttagy Settings</strong> &mdash; where all our stylesheets are (not preprocessed).
+          </p>
+
+          <p>
+            <strong>Menus</strong> &mdash; where all our stylesheets are (not preprocessed).
+          </p>
+
+        </div>
+      </div><!-- /.demo-row -->
+
+
+
+
+
+
+      <div class="demo-row">
+        <div class="demo-title">
+          <h3>5. File Structure</h3>
+        </div>
+
+        <div class="demo-content demo-content-article">
+          <p>
+<pre class="prettyprint">
+  theme-folder/
+  <span class="muted">├──</span> style.css
+  <span class="muted">├──</span> css/
+  <span class="muted">│   └──</span> You can add any new CSS files here
+  <span class="muted">├──</span> js/
+  <span class="muted">│   └──</span> You can add any new JS files here
+  <span class="muted">├──</span> font/
+  <span class="muted">│   └──</span> You can add any new fonts files here
+  <span class="muted">├──</span> img/
+  <span class="muted">│   └──</span> You can add any new Images/Assets files here
+  <span class="muted">├──</span> languages/
+  <span class="muted">│   └──</span> en_US.mo
+  <span class="muted">│   └──</span> en_US.pot
+  <span class="muted">└──</span> includes/
+  <span class="muted">    ├──</span> config.less
+  <span class="muted">    ├──</span> flat-ui.less
+  <span class="muted">    ├──</span> icon-font.less
+  <span class="muted">    ├──</span> mixins.less
+  <span class="muted">    ├──</span> spaces.less
+  <span class="muted">    └──</span> modules/
+</pre>
+          </p>
+
+          <p>
+            Let's go from top to the bottom of this list.
+          </p>
+
+          <p>
+            <strong>bootstrap/</strong> &mdash; as you can guess this is a folder where all original
+            Bootstrap files are (untouched). Before using our theme please make sure you didn't modify
+            anything that can break compatibility: paddings, margins, etc. <br/>
+            <em class="text-info">Note</em>: you can modify <code>variables.less</code> safely.
+          </p>
+
+          <p>
+            <strong>css/</strong> &mdash; compiled Flat UI CSS. If you like everything and don't want
+            to change the look of our components it is better to use CSS version. This is an easiest
+            way to start using Flat UI.
+          </p>
+
+          <p>
+            <strong>fonts/</strong> &mdash; yes, this is an icon font. When integrating make sure you
+            copied all font files correctly. You might want to change/add glyphs. If so, open
+            <a href="http://icomoon.io/app">IcoMoon</a> and import <code>icomoon-session.json</code>
+            there to make all glyhps editable.
+          </p>
+
+          <p>
+            <img src="http://take.ms/wzfgEz" alt="" />
+          </p>
+
+          <p>
+            <strong>images/</strong> &mdash; unfortunately we should use them in few cases. The rest
+            is in&nbsp;the&nbsp;glyphs.
+          </p>
+
+          <p>
+            <strong>js/</strong> &mdash; we tried hard to make our components all look true Flat. To do
+            so we used JS plugins. Most of them are well known, some of them not. The most JS-ified part
+            is form components: checkboxes, radios, switches, selects since it is not currently possible
+            to style them identically in all browsers. Open <code>application.js</code> for integration
+            examples.
+          </p>
+
+          <p>
+            <strong>less/</strong> &mdash; where all our stylesheets are (not preprocessed).
+          </p>
+
+          <ul>
+            <li>
+              <code>config.less</code> is where all variables are.
+            </li>
+            <li>
+              <code>flat-ui.less</code> links everything into one single bundle.
+            </li>
+            <li>
+              <code>icon-font.less</code> makes all icon glyphs work. Converted by
+              <a href="http://icomoon.io">IcoMoon</a>.
+            </li>
+            <li>
+              <code>mixins.less</code> helps automating things. Feel free to add yours here.
+            </li>
+            <li>
+              <code>modules/</code> is where all components are. If you want to add yours create
+              module-name.less here. Name it as a class name if possible.
+            </li>
+          </ul>
+        </div>
+      </div><!-- /.demo-row -->
+
+      <div class="demo-row">
+        <div class="demo-title">
+          <h3>5. Theme Components</h3>
+        </div>
+
+        <div class="demo-content demo-content-article">
+          <ul>
+            <li>
+              Offer listing widget
+              <br/>Filename <code>includes/parts/accommodation-item.php</code>
+              <br/>Found in <code class="file">includes/parts/homepage-top-destinations.php</code> <code class="file">page-accommodation-list.php</code> <code class="file">page-collections.php</code> <code class="file">page-home.php</code> <code class="file">single-accommodation.php</code> <code class="file">single-tour.php</code> <code class="file">single-location.php</code>
+            </li>
+            <br/>
+
+            <li>
+              Breadcrumb Steps
+              <br/>Filename <code>includes/parts/breadcrumb-steps.php</code>
+              <br/>Found in <code class="file">page-booking.php</code> <code class="file">single-accommodation.php</code>
+            </li>
+            <br/>
+
+            <li>
+              Fixed Horizontal Navigation in Tours Single Page
+              <br/>Finemame <code>includes/parts/fixed-nav-menu-tours.php</code>
+              <br/>Found in <code class="file">single-tour.php</code>
+            </li>
+            <br/>
+
+            <li>
+              <code>iconbar.less</code> Icon bar (another navigation type).
+            </li>
+            <li>
+              <code>select.less</code> Custom selects.
+            </li>
+            <li>
+              <code>switch.less</code> Custom switch.
+            </li>
+            <li>
+              <code>tagsinput.less</code> Tags input field.
+            </li>
+            <li>
+              <code>ui-datepicker.less</code> Datepicker widget.
+            </li>
+            <li>
+              <code>ui-slider.less</code> Range slider.
+            </li>
+            <li>
+              <code>ui-spinner.less</code> Text input with increment/decrement.
+            </li>
+          </ul>
+        </div>
+      </div><!-- /.demo-row -->
+
+      <div class="demo-row">
+        <div class="demo-title">
+          <h3>6. Restyled Components</h3>
+        </div>
+
+        <div class="demo-content demo-content-article">
+          <ul>
+            <li><code>alerts.less</code></li>
+            <li><code>breadcrumbs.less</code></li>
+            <li><code>buttons.less</code></li>
+            <li><code>caret.less</code></li>
+            <li><code>dropdown.less</code></li>
+            <li><code>input.less</code></li>
+            <li><code>label-badges.less</code></li>
+            <li><code>nav.less</code></li>
+            <li><code>navbar.less</code></li>
+            <li><code>pager.less</code></li>
+            <li><code>pagination.less</code></li>
+            <li><code>popover.less</code></li>
+            <li><code>progress.less</code></li>
+            <li><code>tables.less</code></li>
+            <li><code>tooltip.less</code></li>
+            <li><code>type.less</code></li>
+          </ul>
+        </div>
+      </div><!-- /.demo-row -->
+
+    </div><!-- /.container -->
+    <script src="js/google-code-prettify/run_prettify.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $("[data-toggle='tooltip']").tooltip();
+    </script>
+  </body>
+</html>
